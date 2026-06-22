@@ -1,0 +1,82 @@
+/* ==UserStyle==
+@name           Notion Content Only RTL
+@namespace      notion.so
+@version        2.0.0
+@description    RTL support for Notion page content only (keeps UI LTR)
+@author         M16
+@copyright      M16
+==/UserStyle== */
+
+@-moz-document domain("notion.so"), domain("notion.site"), domain("notion.com") {
+    
+    /* 1. Target ONLY the content blocks inside the page editor */
+    .notion-page-content .notion-selectable,
+    .notion-page-content .notion-text-block,
+    .notion-page-content .notion-bulleted_list-block,
+    .notion-page-content .notion-numbered_list-block,
+    .notion-page-content .notion-to_do-block,
+    .notion-page-content .notion-quote-block,
+    .notion-page-content .notion-callout-block,
+    .notion-page-content .notion-toggle-block {
+        direction: rtl !important;
+        text-align: right !important;
+    }
+
+    /* 2. Apply strict Bidi and RTL to actual text input areas */
+    .content-editable-leaf-rtl,
+    .content-editable-leaf-ltr,
+    [data-content-editable-leaf="true"] {
+        direction: rtl !important;
+        text-align: right !important;
+        unicode-bidi: isolate !important; 
+    }
+
+    /* 3. Page Title RTL Alignment */
+    .notion-page-block > div,
+    .notion-page-content-header {
+        direction: rtl !important;
+        text-align: right !important;
+    }
+
+    /* 4. Fix List Markers (Bullets & Numbers) spacing */
+    .notion-list-item-box-left {
+        margin-left: 8px !important;
+        margin-right: 0 !important;
+    }
+
+    /* 5. Fix Checkboxes in To-Do lists */
+    .notion-to_do-block > div > div > div:first-child {
+        margin-left: 8px !important;
+        margin-right: 0 !important;
+    }
+
+    /* 6. Flip Quote Block borders so the line is on the right */
+    .notion-quote-block > div:first-child {
+        border-left: none !important;
+        border-right: 3px solid currentcolor !important;
+    }
+    .notion-quote-block > div:first-child > div:first-child {
+        padding-right: 14px !important;
+        padding-left: 0 !important;
+    }
+
+    /* 7. Keep Code Blocks strictly LTR (for programming languages) */
+    .notion-code-block,
+    .notion-code-block * {
+        direction: ltr !important;
+        text-align: left !important;
+        unicode-bidi: isolate !important;
+    }
+
+    /* 8. Align text in Database Tables to the right (without flipping the UI of the table) */
+    .notion-table-view-cell > div {
+        direction: rtl !important;
+        text-align: right !important;
+    }
+    
+    /* 9. Format AI Chat Bubbles to RTL */
+    [data-agent-chat-user-step-id] {
+        direction: rtl !important;
+        text-align: right !important;
+    }
+}
