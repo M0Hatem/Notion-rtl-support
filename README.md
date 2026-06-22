@@ -33,16 +33,17 @@ Select your browser to download and install:
 
 Once you have Stylus installed, click one of the methods below to install:
 
-### Method A: One-Click Install from UserStyles.world (Recommended)
-1. Go to the [Notion Content Only RTL page on UserStyles.world](https://userstyles.world/style/28702/notion-content-only-rtl).
-2. Click the **Install** button.
-3. Stylus will open a tab prompting you to install the style. Click **Install Style** on the left.
-
-### Method B: Install Directly from GitHub Raw (Auto-updates)
-You can install the style directly from this repository and receive automatic updates whenever new changes are pushed:
+### Method A: Direct Install from GitHub Raw (Recommended & Auto-updates)
+You can install the style directly from this repository with a single click and receive automatic updates in Stylus whenever new changes are pushed to GitHub:
 1. Click this link: [Direct Install from GitHub Raw](https://raw.githubusercontent.com/M0Hatem/Notion-rtl-support/main/notion-rtl.user.css).
 2. Stylus will automatically intercept the URL and open the installation window.
 3. Click **Install Style** on the left.
+
+### Method B: One-Click Install from UserStyles.world
+Alternatively, you can install it from the public UserStyles.world directory page:
+1. Go to the [Notion Content Only RTL page on UserStyles.world](https://userstyles.world/style/28702/notion-content-only-rtl).
+2. Click the **Install** button.
+3. Stylus will open a tab prompting you to install the style. Click **Install Style** on the left.
 
 ### Method C: Manual Installation
 If you prefer to copy and paste the code manually:
